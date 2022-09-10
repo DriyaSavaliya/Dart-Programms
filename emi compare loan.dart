@@ -1,0 +1,32 @@
+import'dart:io';
+import'dart:math';
+void main() {
+    stdout.write('Principal Amount for loan1:');
+    double p1 = double.parse(stdin.readLineSync());
+    stdout.write('Intrest for loan1:');
+    double r1 = double.parse(stdin.readLineSync());
+    r1=r1/1200;
+    stdout.write('Loan Tenure for loan1:');
+    double n1 = double.parse(stdin.readLineSync());
+    double EMI1 = ((p1*r1)*pow(1+r1,(n1*12)))/(pow(1+r1,(n1*12))-1);
+    stdout.write('EMI Monthly payment for loan1:');
+    print(EMI1);
+    stdout.write('EMI Principal+Interest for loan1:');
+    print(EMI1*12*n1);
+    stdout.write('Total Interest Payment for loan1:');
+    print((EMI1*12*n1)-(p1));
+    stdout.write('Principal Amount for loan2:');
+    double p2 = double.parse(stdin.readLineSync());
+    stdout.write('Intrest for loan2:');
+    double r2 = double.parse(stdin.readLineSync());
+    r2=r2/1200;
+    stdout.write('Loan Tenure for loan2:');
+    double n2 = double.parse(stdin.readLineSync());
+    double EMI2 = ((p2*r2)*pow(1+r2,(n2*12)))/(pow(1+r1,(n2*12))-1);
+    print('EMI Monthly payment for loan2:');
+    print(EMI2);
+    stdout.write('EMI Principal+Interest for loan2:');
+    print(EMI2*12*n2);
+    stdout.write('Total Interest Payment for loan2:');
+    print((EMI2*12*n2)-(p2));
+}
